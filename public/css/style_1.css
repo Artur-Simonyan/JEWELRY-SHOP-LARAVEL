@@ -1,0 +1,633 @@
+body {
+    font-family: Arial !important;
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/background.jpg);
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.main_menu li {
+    color: white !important;
+
+}
+
+.top_part, .phone_menu, .main_menu {
+    z-index: 9999;
+    display: inline-block;
+    width: 100%;
+}
+
+.main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#logo {
+    background: url(../images/logo.png) no-repeat 8% center;
+    background-size: contain;
+    padding: 5% 0;
+    margin-left: 2%;
+    width: 10%;
+    float: left;
+}
+
+.table img {
+    height: 100px;
+    width: 120px;
+}
+
+#social {
+    padding: 2%;
+    float: right;
+    width: auto;
+    margin: 0;
+}
+
+#social li {
+    background-color: black;
+    border-radius: 40px;
+    list-style: none;
+    float: left;
+    margin: 5px;
+}
+
+#social li a {
+    display: block;
+    padding: 25px;
+}
+
+.soc_1 {
+    background: url(../images/facebook.png) no-repeat center;
+}
+
+.soc_2 {
+    background: url(../images/google.png) no-repeat center;
+}
+
+.soc_3 {
+    background: url(../images/twitter.png) no-repeat center;
+}
+
+#social li:hover {
+    background-color: #70B5DE;
+}
+
+.main_menu {
+    font-family: "Maiandra GD" !important;
+    background-color: #70B5DE;
+    display: inline-block;
+
+}
+
+.main_menu > li {
+    position: relative;
+    float: left;
+}
+
+.main_menu > li:nth-child(1) {
+    padding: 20px 50px;
+    position: relative;
+    float: left;
+}
+
+#home {
+    background: url(../images/home.png) no-repeat center;
+    background-color: #70B5DE;
+    color: #70B5DE;
+}
+
+.main_menu > li:nth-child(n+2) a {
+    padding: 20px 50px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    color: white;
+}
+
+.sub_menu > li a, .login_sub_menu > li a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    color: white;
+}
+
+.main_menu li:hover, #home:hover {
+    background-color: #4A8FB8;
+}
+
+.sub_menu, .login_sub_menu {
+    position: absolute !important;
+    top: 100%;
+    left: 0;
+    display: none;
+    width: 100%;
+
+}
+
+.sub_menu li {
+    border-bottom: 0.1em solid #D6D6D6;
+    background-color: #70B5DE;
+    padding: 9% 8%;
+}
+
+.login_sub_menu li {
+    border-bottom: 0.1em solid #D6D6D6;
+    background-color: #70B5DE;
+}
+
+#slideshow {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+#slideshow img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#slideshow > div {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+}
+
+.news {
+    display: inline-block;
+    background-color: black;
+    margin: 2% 0;
+    width: 100%;
+    text-align: center;
+}
+
+.news h2 {
+    font-family: "Maiandra GD" !important;
+    background-color: #E9E9E9;
+    font-family: cursive;
+    padding: 2%;
+    margin: 0;
+}
+
+.news ul {
+    text-align: center;
+}
+
+.news li {
+    width: 16.5%;
+    height: 120px;
+    border: 0.15em solid white;
+    display: inline-block;
+    margin: 1%;
+    cursor: pointer;
+}
+
+#gallery img {
+    cursor: pointer;
+}
+
+.news li:nth-child(1) {
+    background: url(../images/01.jpg) no-repeat;
+    background-size: 100% 100% !important;
+
+}
+
+.news li:nth-child(2) {
+    background: url(../images/02.jpg) no-repeat;
+    background-size: 100% 100% !important;
+}
+
+.news li:nth-child(3) {
+    background: url(../images/03.jpg) no-repeat;
+    background-size: 100% 100% !important;
+
+}
+
+.news li:nth-child(4) {
+    background: url(../images/04.jpg) no-repeat;
+    background-size: 100% 100% !important;
+
+}
+
+.news li:nth-child(5) {
+    background: url(../images/05.jpg) no-repeat;
+    background-size: 100% 100% !important;
+}
+
+.news ul li {
+    border-radius: 3px;
+}
+
+.popup {
+    position: fixed;
+    z-index: 9999;
+    width: 600px;
+    height: 400px;
+    top: 10%;
+    left: 50%;
+    margin-left: -300px;
+    text-align: center;
+    display: none;
+    border: 5px solid black;
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+    transition: 2s;
+}
+
+.popupGallery {
+    position: fixed;
+    z-index: 9999;
+    width: 520px;
+    height: 520px;
+    top: 10%;
+    left: 50%;
+    margin-left: -220px;
+    text-align: center;
+    display: none;
+    border: 5px solid black;
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+    transition: 2s;
+}
+
+.closeBtn {
+    position: absolute;
+    padding: 3px 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    right: -15px;
+    top: -13px;
+    cursor: pointer;
+}
+
+.popup:hover {
+    border: 5px solid #cec8c8;
+    transform: scale(1.1);
+}
+
+.popupGallery:hover {
+    border: 5px solid #cec8c8;
+    transform: scale(1.1);
+}
+
+.content {
+    text-align: center;
+    font-size: 12px !important;
+}
+
+.content a {
+    border-radius: 3px !important;
+}
+
+.content li {
+    background-color: #FFFEFE;
+    display: inline-block;
+    margin: 2% 3px;
+    width: 24%;
+}
+
+.content li h4, .content li p {
+    padding: 0 5%;
+}
+
+.content li h4 span {
+    color: #70B5DE;
+}
+
+.content li .image {
+    height: 135px;
+}
+
+.content li:nth-child(1) .image {
+    background: url(../images/home1.jpg) no-repeat;
+    background-size: 100% 100% !important;
+}
+
+.content li:nth-child(2) .image {
+    background: url(../images/home2.jpg) no-repeat ;
+    background-size: 100% 100% !important;
+
+}
+
+.content li:nth-child(3) .image {
+    background: url(../images/home3.jpg) no-repeat ;
+    background-size: 100% 100% !important;
+
+}
+
+.content li:nth-child(4) .image {
+    background: url(../images/home4.jpg) no-repeat ;
+    background-size: 100% 100% !important;
+
+}
+
+.content li p {
+    color: #B5B7B6;
+}
+
+.content li .more {
+    text-transform: uppercase;
+    background-color: #000;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0% 5% 7%;
+    padding: 4% 5%;
+    color: #fff;
+}
+
+.content li .more:hover {
+    background-color: #70B5DE;
+}
+
+@media only screen and (max-width: 1150px) {
+    .phone_menu {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        width: 100%;
+        height: 35px;
+        background: url(../images/res.png) no-repeat;
+        margin-top: 15px;
+        background-size: 35px;
+        background-position: right;
+    }
+
+    .main_menu {
+        position: absolute;
+        display: none;
+        overflow: hidden;
+        width: 100%;
+        top: 100%;
+    }
+
+    .phone_menu:hover .main_menu {
+        display: block !important;
+        overflow: auto;
+    }
+
+    .main_menu > li {
+        float: none;
+    }
+
+    .main_menu > li a {
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        color: white;
+    }
+
+    .main_menu li:hover, #home:hover {
+        background-color: #70B5DE;
+    }
+
+    .sub_menu, .login_sub_menu {
+        display: none;
+        position: static;
+        transition: 2s;
+    }
+
+    .main_menu > li:hover .sub_menu, .main_menu > li:hover .login_sub_menu {
+        display: block;
+    }
+
+    .sub_menu li, .login_sub_menu li {
+        border-bottom: 0.1em solid #70B5DE;
+        background-color: #70B5DE;
+        padding: 10px 20px;
+
+    }
+
+}
+
+@media only screen and (max-width: 960px) {
+    .main_menu > li {
+        padding: 15px 40px;
+    }
+
+    .news li {
+        width: 16%;
+        height: 125px;
+    }
+
+    .content li {
+        width: 22%;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+
+    .main_menu > li {
+        padding: 15px 25px;
+    }
+
+    .main_menu > li a {
+        font-size: 15px;
+    }
+
+    .news li {
+        width: 30%;
+        height: 165px;
+    }
+
+    .content li {
+        width: 46%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+
+    #logo {
+        width: 90%;
+        float: none;
+        margin: 5% auto 0;
+        text-align: center;
+        background-size: contain;
+        background-position: center;
+    }
+
+    #social {
+        float: none;
+        margin: 0 auto;
+        display: table;
+        text-align: center;
+    }
+
+    #home {
+
+        background: url(../images/home.png) no-repeat center;
+        background-color: #70B5DE;
+        color: #70B5DE;
+    }
+
+    .news li {
+        width: 85%;
+        height: 260px;
+    }
+
+    .content li {
+        width: 85%;
+    }
+}
+
+.pagination {
+    padding-left: 45% !important;
+}
+.catalog a{
+    color: white;
+    text-decoration: none;
+}
+.categoryName {
+    border-bottom: 3px dotted #fff;
+    border-top: 3px dotted #fff;
+    margin: 2% auto;
+    height: 85px;
+    font-family: "Maiandra GD";
+}
+.categoryName a:nth-child(1){
+    cursor: pointer;
+    margin-top: 2%;
+    width: 33%;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    float: left;
+ }
+.categoryName a h6:nth-child(1){
+    cursor: pointer;
+}
+.categoryName a:nth-child(2){
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    width: 33%;
+    float: left;
+}
+.categoryName a h6:nth-child(3){
+    cursor: pointer;
+}
+.categoryName a:nth-child(3){
+    text-align: center;
+    width: 33%;
+    text-decoration: none;
+    color: white;
+    margin-top: 2%;
+    float: left;
+}
+.categoryName{
+    text-align: center;
+}
+.content h4, a {
+    font-family: "Maiandra GD";
+}
+
+#gallery > img {
+    object-fit: cover;
+    height: 320px;
+    width: 320px;
+}
+
+.galleryMenu > li {
+    padding: 0 50px;
+    display: inline-block;
+    margin-left: 1px; !important;
+}
+
+.galleryMenu > li > a:hover {
+    cursor: pointer;
+    color: #70B5DE;
+}
+
+.galleryMenu > li > a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    color: white;
+}
+
+.galleryMenu h1 {
+    font-family: "Maiandra GD";
+}
+
+.copy {
+    color: white;
+    margin: 2%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#send textarea, #sendProd textarea {
+    margin: 10px;
+}
+
+#send input, #send select, #send input:nth-child(3), #sendProd input, #sendProd select, #sendProd input:nth-child(3) {
+    margin: 10px;
+}
+
+#send select, #sendProd select {
+    color: black;
+}
+
+.aboutUs h1, p {
+    text-align: center;
+    font-family: Cambria;
+}
+
+.aboutUs p {
+    font-size: 1.3em;
+}
+
+.col-sm-3 {
+    text-align: center;
+}
+
+.about_Content h1:nth-child(1) {
+    padding-top: 20px;
+}
+
+.available {
+    background: url(../images/available.png);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.notAvailable {
+    background: url(../images/notavaliable.png);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.img-thumbnail:hover {
+    border: 1px solid black !important;
+}
+
+textarea {
+    resize: none;
+}
+
+table img {
+    border-radius: 5px;
+}
+
+table img:hover {
+    cursor: pointer;
+}
+
+.container-fluid h1, .container-fluidp {
+    font-family: "Maiandra GD";
+}
+#aboutText textarea{
+    width: 100%;
+    background: transparent;
+    color: white
+}
